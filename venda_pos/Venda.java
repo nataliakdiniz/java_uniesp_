@@ -1,4 +1,5 @@
 public class Venda {
+    private Integer codigo;
     private Produto produto;
     private Vendedor vendedor;
     private Double desconto = 0.00;
@@ -58,6 +59,7 @@ public class Venda {
      * • O valor total da venda
      */
     public void imprimir(){
+        System.out.println("+--------- Resumo da venda "+ this.codigo +" ---------+\n");
         System.out.println("--- vendedor ---");
         System.out.println("Código: " + this.vendedor.getCodigo());
         System.out.println("Nome: " + this.vendedor.getNome());
@@ -72,7 +74,7 @@ public class Venda {
 
         System.out.println("--- venda ---");
         System.out.println("Quantidade de itens vendidos:" + this.quantidadeItens);
-        System.out.println("Valor total: R$" + this.valor);
+        System.out.println("Valor total: R$" + this.valor + "\n\n");
     }
 
     public Produto getProduto() {
@@ -115,4 +117,11 @@ public class Venda {
         this.quantidadeItens = quantidadeItens;
     }
 
+    public Integer getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
 }

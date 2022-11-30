@@ -4,6 +4,8 @@ public class Vendedor {
     private Double comissao;
     private String endereco;
 
+    Vendedor() {}
+
     Vendedor(Integer codigo, String nome, String endereco) {
         this.codigo = codigo;
         this.nome = nome;
@@ -40,5 +42,15 @@ public class Vendedor {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    @Override
+    public String toString() {
+        return
+            "Código: " + codigo + '\n' +
+            "Nome: " + nome + '\n' +
+            "Comissão: " + comissao + '%' + '\n' +
+            "Endereço: " + endereco + '\n' +
+            "----------------------------";
     }
 }

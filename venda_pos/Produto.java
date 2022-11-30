@@ -5,6 +5,8 @@ public class Produto {
     private Double valorCusto;
     private Boolean promocao;
 
+    Produto() {}
+
     Produto(Integer codigo, String descricao, Double valorVenda, Double valorCusto, Boolean promocao) {
         this.codigo = codigo;
         this.descricao = descricao;
@@ -51,5 +53,16 @@ public class Produto {
 
     public void setPromocao(Boolean promocao) {
         this.promocao = promocao;
+    }
+
+    @Override
+    public String toString() {
+        return
+            "Código: " + codigo + '\n' +
+            "Descrição: " + descricao + '\n' +
+            "Valor de VENDA: R$" + valorVenda + '\n' +
+            "Valor de CUSTO: R$" + valorCusto + '\n' +
+            "Produto em promoção: " + promocao + '\n' +
+            "----------------------------";
     }
 }
